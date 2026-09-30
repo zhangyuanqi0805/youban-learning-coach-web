@@ -28,6 +28,7 @@ export default {
     }
     const asset = await env.ASSETS.fetch(request);
     const out = new Headers(asset.headers);
+    out.set('cache-control','no-store');
     out.set('x-content-type-options','nosniff');
     out.set('referrer-policy','strict-origin-when-cross-origin');
     out.set('content-security-policy',"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'");
