@@ -95,7 +95,7 @@ async function render(){
 }
 document.addEventListener('click',async event=>{
   const tab=event.target.closest('[data-auth-tab]');if(tab){const login=tab.dataset.authTab==='login';$('#login-form').hidden=!login;$('#register-form').hidden=login;document.querySelectorAll('[data-auth-tab]').forEach(b=>b.classList.toggle('active',b===tab));return;}
-  const navButton=event.target.closest('[data-view]');if(navButton){go(navButton.dataset.view);return;}
+  const navButton=event.target.closest('.nav-button[data-view]');if(navButton){go(navButton.dataset.view);return;}
   const button=event.target.closest('[data-action]');if(!button||busy)return;
   const name=button.dataset.action;
   if(name==='go'){const {view,...params}=button.dataset;delete params.action;go(view,params);return;}
