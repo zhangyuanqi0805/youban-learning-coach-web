@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e7f5ee">
+  <title>有伴学习空间 · 远程学习教练</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="demo-ribbon" role="note">独立公网测试版 · 账号与学习记录接入这台 Mac 的有伴总控 · AI 老师问答尚未接入</div>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主导航">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">伴</span><span><strong>有伴</strong><small>学习空间</small></span></div>
+      <nav id="side-nav" aria-label="学习功能"></nav>
+      <div class="side-bottom"><div class="tiny-rule"></div><div class="profile-mark"><span class="student-avatar">学</span><span><strong id="profile-name">同学</strong><small id="profile-caption">请先登录</small></span></div></div>
+    </aside>
+    <main class="workspace">
+      <header class="topbar"><div class="topbar-title"><span class="topbar-kicker">有伴学习空间 / 远程学习教练</span><h1 id="page-title">有伴学习教练</h1><p id="page-subtitle">把资料、练习和下一步连起来</p></div><div class="topbar-actions"><span id="connection" class="connection-pill"><span class="connection-dot"></span>正在连接本机总控…</span><button class="quiet-button" id="refresh" type="button">刷新状态</button></div></header>
+      <div id="mobile-nav" class="mobile-nav" aria-label="移动端导航"></div>
+      <section id="view" class="view" aria-live="polite"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.mjs"></script>
+</body>
+</html>
